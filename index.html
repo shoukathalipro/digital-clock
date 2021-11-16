@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--This is Project - 4, that has been done for Elevation Academy.
+        This project consists of html,css as well as javascript.
+        In this project, the web page design in this address
+        <a href="https://xd.adobe.com/view/b53c9fbf-9b3c-40c9-b780-4e048860beea-e06f/">todo-app-ui-mobile</a>
+        has been tried to be replicated.
+    -->
+
+    <!-- Time taken to complete the project = Exaclty 20 Hours -->
+
+    <!-- The main container contains 2 divs i.e. left and right containers -->
+    <!-- left container further contains 5 divs i.e. left box 1 to 5 -->
+    <!-- right container further contains 2 divs i.e. right box 1 & 2 -->
+    <!-- left-box1 only has a div which contains an image -->
+    <!-- left-box2 is further divided into 3 i.e. left, middle & right -->
+    <!-- left-box3,4,5 only has a div -->
+    <!-- left-box2-right is where all the dropdowns are arranged -->
+    <!-- right-box1 further contains 3 divs i.e. top, middle & bottom
+        where middle & bottom are empty divs
+    -->
+    <!-- right-box2 further contains 2 divs which contains a text and image
+        respectively
+    -->
+    <!-- Two functions are defined in the external js
+         i.e clockTime() & dynamicTimeSet() 
+    -->
+    <!-- clockTime() is for displaying time in real time in digital format -->
+    <!-- dynamicTimeSet() is for making the page dynamic according to
+    real time and also when the user selects 3 options and sets the time
+    by clicking on the provided button. According to the selected options,
+    the image and text in the right container along with the text in time-box4
+    would be changed dynamically. The text in time-box3 would also be changed
+    according to change in real time but without user interaction. Even though
+    this function works on click of the button in time-box5, it also has to be 
+    called initially without any user-input so that the first option in all
+    the dropdowns work and also to change everything dynamically upon loading
+    the webpage.
+    -->
+
+
+    <div id="main-container">
+        <div id="left-container">
+            <div class="left-box1 left-box">
+                <div class="left-box1-in"><img class="clock-image" src="images/clock-logo.png" alt=""></div>
+            </div>
+            <div class="left-box2 left-box">
+                <div class="left-box2-left">
+                    <div class="left-box2-left-in"><img src="images/wake-up-time.png" alt=""></div>
+                    <div class="left-box-line"></div>
+                    <div class="left-box2-left-in"><img src="images/lunch-time.png" alt=""></div>
+                    <div class="left-box-line"></div>
+                    <div class="left-box2-left-in"><img src="images/nap-time.png" alt=""></div>
+                </div>
+                <div class="left-box2-middle">
+                    <div class="left-box2-middle-in">Set wake up time</div>
+                    <div class="left-box2-middle-in">Set lunch time</div>
+                    <div class="left-box2-middle-in">Set nap time</div>
+                </div>
+                <div class="left-box2-right">
+                    <div class="left-box2-right-in">
+                        <select name="wake-up-time" id="wake-up-time">
+                            <option value="0" selected>12 AM - 1 AM</option>
+                            <option value="1">1 AM - 2 AM</option>
+                            <option value="2">2 AM - 3 AM</option>
+                            <option value="3">3 AM - 4 AM</option>
+                            <option value="4">4 AM - 5 AM</option>
+                            <option value="5">5 AM - 6 AM</option>
+                            <option value="6">6 AM - 7 AM</option>
+                            <option value="7">7 AM - 8 AM</option>
+                            <option value="8">8 AM - 9 AM</option>
+                            <option value="9">9 AM - 10 AM</option>
+                            <option value="10">10 AM - 11 AM</option>
+                            <option value="11">11 AM - 12 PM</option>
+                            <option value="12">12 PM - 1 PM</option>
+                            <option value="13">1 PM - 2 PM</option>
+                            <option value="14">2 PM - 3 PM</option>
+                            <option value="15">3 PM - 4 PM</option>
+                            <option value="16">4 PM - 5 PM</option>
+                            <option value="17">5 PM - 6 PM</option>
+                            <option value="18">6 PM - 7 PM</option>
+                            <option value="19">7 PM - 8 PM</option>
+                            <option value="20">8 PM - 9 PM</option>
+                            <option value="21">9 PM - 10 PM</option>
+                            <option value="22">10 PM - 11 PM</option>
+                            <option value="23">11 PM - 12 AM</option>
+                        </select>
+                    </div>
+                    <div class="left-box2-right-in">
+                        <select name="lunch-time" id="lunch-time">
+                            <option value="0" selected>12 AM - 1 AM</option>
+                            <option value="1">1 AM - 2 AM</option>
+                            <option value="2">2 AM - 3 AM</option>
+                            <option value="3">3 AM - 4 AM</option>
+                            <option value="4">4 AM - 5 AM</option>
+                            <option value="5">5 AM - 6 AM</option>
+                            <option value="6">6 AM - 7 AM</option>
+                            <option value="7">7 AM - 8 AM</option>
+                            <option value="8">8 AM - 9 AM</option>
+                            <option value="9">9 AM - 10 AM</option>
+                            <option value="10">10 AM - 11 AM</option>
+                            <option value="11">11 AM - 12 PM</option>
+                            <option value="12">12 PM - 1 PM</option>
+                            <option value="13">1 PM - 2 PM</option>
+                            <option value="14">2 PM - 3 PM</option>
+                            <option value="15">3 PM - 4 PM</option>
+                            <option value="16">4 PM - 5 PM</option>
+                            <option value="17">5 PM - 6 PM</option>
+                            <option value="18">6 PM - 7 PM</option>
+                            <option value="19">7 PM - 8 PM</option>
+                            <option value="20">8 PM - 9 PM</option>
+                            <option value="21">9 PM - 10 PM</option>
+                            <option value="22">10 PM - 11 PM</option>
+                            <option value="23">11 PM - 12 AM</option>
+                        </select>
+                    </div>
+                    <div class="left-box2-right-in">
+                        <select name="nap-time" id="nap-time">
+                            <option value="0" selected>12 AM - 1 AM</option>
+                            <option value="1">1 AM - 2 AM</option>
+                            <option value="2">2 AM - 3 AM</option>
+                            <option value="3">3 AM - 4 AM</option>
+                            <option value="4">4 AM - 5 AM</option>
+                            <option value="5">5 AM - 6 AM</option>
+                            <option value="6">6 AM - 7 AM</option>
+                            <option value="7">7 AM - 8 AM</option>
+                            <option value="8">8 AM - 9 AM</option>
+                            <option value="9">9 AM - 10 AM</option>
+                            <option value="10">10 AM - 11 AM</option>
+                            <option value="11">11 AM - 12 PM</option>
+                            <option value="12">12 PM - 1 PM</option>
+                            <option value="13">1 PM - 2 PM</option>
+                            <option value="14">2 PM - 3 PM</option>
+                            <option value="15">3 PM - 4 PM</option>
+                            <option value="16">4 PM - 5 PM</option>
+                            <option value="17">5 PM - 6 PM</option>
+                            <option value="18">6 PM - 7 PM</option>
+                            <option value="19">7 PM - 8 PM</option>
+                            <option value="20">8 PM - 9 PM</option>
+                            <option value="21">9 PM - 10 PM</option>
+                            <option value="22">10 PM - 11 PM</option>
+                            <option value="23">11 PM - 12 AM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="left-box3 left-box">
+                <div id="dynamic-text1" class="left-box3-in">GOOD AFTERNOON !!</div>
+            </div>
+            <div class="left-box4 left-box">
+                <div id="dynamic-text2" class="left-box4-in">Party time!</div>
+            </div>
+            <div class="left-box5 left-box">
+                <div class="left-box5-in"><a id="time-set-btn" class="left-box5-btn" href="#" onclick=dynamicTimeSet()>SET TIME</a></div>
+            </div>
+        </div>
+        <div id="right-container">
+            <div class="right-box1 right-box">
+                <div class="right-box1-top">
+                    <div class="right-box1-top-in">
+                        <div class="time-box1 time-box">TIME</div>
+                        <div class="time-box2 time-box">
+                            <div class="time-text">
+                                <div id="time-hour" class="time-text1">10</div>
+                                <div class="time-text2">hours</div>
+                            </div>
+                            <div class="time-box-in"><img class="time-box-image" src="images/image1.png" alt=""></div>
+                        </div>
+                        <div class="time-colon1 time-colon">:</div>
+                        <div class="time-box3 time-box">
+                            <div class="time-text">
+                                <div id="time-minute" class="time-text1">45</div>
+                                <div class="time-text2">mins</div>
+                            </div>
+                            <div class="time-box-in"><img class="time-box-image" src="images/image1.png" alt=""></div>
+                        </div>
+                        <div class="time-colon2 time-colon">:</div>
+                        <div class="time-box4 time-box">
+                            <div class="time-text">
+                                <div id="time-second" class="time-text1">01</div>
+                                <div class="time-text2">secs</div>
+                            </div>
+                            <div class="time-box-in"><img class="time-box-image" src="images/image1.png" alt=""></div>
+                        </div>
+                        <div class="time-box5 time-box">
+                            <div id="time-am-pm" class="time-box5-text">AM</div>
+                            <div class="time-box5-in"><img class="time-box-image" src="images/image2.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-box1-middle"></div>
+                <div class="right-box1-bottom"></div>
+            </div>
+            <div class="right-box2 right-box">
+                <div id="dynamic-text3" class="right-box2-text">LET'S HAVE SOME LUNCH !!</div>
+                <div class="right-box2-in"><img id="dynamic-image" class="right-box-image" src="images/having-lunch.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

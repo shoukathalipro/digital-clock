@@ -1,0 +1,334 @@
+body {
+  margin: 0;
+  background-color: #3d087b;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("../fonts/bauhaus_heavy_bt.ttf");
+  font-weight: 900;
+}
+
+#main-container {
+  height: 90vh;
+  width: 90vw;
+  margin: 5vh auto 5vh 7vw;
+  display: flex;
+  flex-direction: row;
+  gap: 0vw;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+#left-container {
+  height: 90%;
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vh;
+  padding: 1.5vh;
+}
+
+.left-box {
+  width: 100%;
+}
+
+.left-box1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.left-box2 {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5vh;
+  border-radius: 10px;
+}
+
+.left-box2-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
+.left-box-line {
+  width: 1px;
+  height: 5vh;
+  background-color: #c2c2c2;
+}
+
+.left-box2-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10vh;
+}
+
+.left-box2-middle-in {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  color: #3d087b;
+  font-size: 18px;
+}
+
+.left-box2-right {
+  display: flex;
+  flex-direction: column;
+  gap: 9vh;
+}
+
+select {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3d087bde;
+  padding: 0.5vh 3vw;
+  border-radius: 7px;
+  border: 1.5px solid #ededed;
+}
+
+.left-box3 {
+  background-color: #6a419a;
+  box-sizing: border-box;
+  padding: 1.5vh 3vw;
+  border-radius: 10px;
+}
+
+.left-box3-in {
+  font-family: "myFirstFont";
+  font-size: 27px;
+  color: #ffffff;
+}
+
+.left-box4 {
+  background: transparent
+    linear-gradient(113deg, #6e54ec 0%, #cb52f8 40%, #fc5eff 81%, #f1a7c5 100%)
+    0% 0% no-repeat padding-box;
+  width: 55%;
+  box-sizing: border-box;
+  padding: 1vh;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.left-box4-in {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.left-box5-in {
+  width: 30%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  border-radius: 4px;
+  padding: 1vh 0;
+}
+
+.left-box5-btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: green;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 1vh 1vw;
+  border-radius: 4px;
+}
+
+.left-box5-btn:hover {
+  background-color: rgb(0, 255, 0);
+  color: black;
+}
+
+#right-container {
+  height: 90%;
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6.5vh;
+  padding: 1.5vh;
+}
+
+.right-box {
+  width: 100%;
+}
+
+.right-box1 {
+  position: relative;
+  z-index: 3;
+}
+
+.right-box1-top {
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.right-box1-top-in {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background-color: #ffffff;
+  padding: 3vh;
+  gap: 2vw;
+  border-radius: 10px;
+}
+
+.time-box1 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #3d087b;
+}
+
+.time-box {
+}
+
+.time-box2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  align-items: center;
+}
+
+.time-text1 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #8a11bf;
+}
+
+.time-text2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #5f0089;
+}
+
+.time-box-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-colon {
+  margin: -1vw;
+  font-family: "Barlow", sans-serif;
+  color: #8a11bf;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.time-box3 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-box4 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-box5 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-box5-text {
+  position: absolute;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.time-box5-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-box1-middle {
+  width: 75%;
+  height: 45%;
+  background-color: #ffffff;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  top: 70%;
+  opacity: 0.71;
+  border-radius: 10px;
+}
+
+.right-box1-bottom {
+  width: 70%;
+  height: 45%;
+  background-color: #ffffff;
+  position: absolute;
+  margin-left: 50%;
+  transform: translate(-50%, -3vh);
+  z-index: -2;
+  opacity: 0.22;
+  border-radius: 10px;
+}
+
+.right-box2 {
+  background-color: #ffffff;
+  position: relative;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.right-box2-text {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  font-family: "myFirstFont";
+  font-size: 30px;
+  color: #8e53f0;
+}
+
+.right-box2-in {
+  position: absolute;
+  bottom: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

@@ -61,34 +61,48 @@ function dynamicTimeSet () {
     const text3 = document.getElementById("dynamic-text3");
     const image = document.getElementById("dynamic-image");
 
+    if (hour >= 0 || hour < 6) {
+        text1.innerText = "NIGHT"
+    }
+
     if (hour >= 6 || hour < 12) {
         text1.innerText = "GOOD MORNING !!"
     }
 
-    if ((hour >= 12 && minute >= 1) || hour <= 17) {
+    if (hour == 12 || minute == 0) {
+        text1.innerText = "NOON";
+    }
+
+    if ((hour >= 12 && minute >= 1) || (hour < 17)) {
         text1.innerText = "GOOD AFTERNOON !!"
     }
 
-    if ((hour >= 17 && minute >= 1) || (hour <= 5 && minute <= 59)) {
+    if (hour >= 17 || (hour <= 23 && minute == 59)) {
         text1.innerText = "GOOD EVENING !!"
     }
 
-    if (value3 >= hour || value3 <= value1) {
-        text2.innerText = "Time to sleep!";
-        text3.innerText = "GOOD NIGHT !!";
-        image.setAttribute("src", "images/good-night.png");
+    if (value1 != hour && value2 != hour && value3 != hour) {
+        text2.innerText = "";
+        text3.innerText = "";
+        image.setAttribute("src", "images/wormhole.png");
     }
 
-    if (value2 >= hour || value2 <= value3) {
+    if (value1 >= hour && value1 < hour + 1) {
+        text2.innerText = "Time to wake up!";
+        text3.innerText = "WAKE UP !!";
+        image.setAttribute("src", "images/wake-up.png");
+    }
+
+    if (value2 >= hour && value2 < hour + 1) {
         text2.innerText = "Party time!";
         text3.innerText = "LET'S HAVE SOME LUNCH !!";
         image.setAttribute("src", "images/having-lunch.png");
     }
 
-    if (value1 >= hour || value1 <= value2) {
-        text2.innerText = "Time to wake up!";
-        text3.innerText = "WAKE UP !!";
-        image.setAttribute("src", "images/wake-up.png");
+    if (value3 >= hour && value3 < hour + 1) {
+        text2.innerText = "Time to sleep!";
+        text3.innerText = "GOOD NIGHT !!";
+        image.setAttribute("src", "images/good-night.png");
     }
 }
 dynamicTimeSet()
